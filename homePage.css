@@ -761,6 +761,10 @@ i {
         display: none;
     }
 
+    .header-btns {
+        justify-content: center;
+    }
+
     .header-figure-container {
         display: none;
     }
@@ -797,6 +801,10 @@ i {
     @media (max-width: 475px) {
         .header-btns {
             flex-direction: column;
+            width: 100%;
+        }
+
+        .header-figure-container {
             width: 100%;
         }
 
