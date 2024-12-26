@@ -6,8 +6,9 @@
     <script src="https://kit.fontawesome.com/4a7e5bbfa7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="homePage.css">
     <title>Document</title>
+    <script defer src="function.js"></script>
 </head>
-<body>
+<body class="open">
     <nav>
         <div class="row navbar-row">
             <a href="#home" class="logo-link">
@@ -21,11 +22,27 @@
                 <a class="navbar-link" href="#our-team">Our Team</a>
                 <a class="navbar-link" href="#contact">Contact</a>
             </div>
-            <i class="fa-solid fa-bars menu-bars"></i>
             <div class="nav-btns">
                 <button class="sign-in-btn btn">Sign In</button>
                 <button class="register-btn btn">Register</button>
             </div>
+            <button class="menu-icon" onclick="openMenu()">
+                <i class="fa-solid fa-bars menu-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <nav class="menu">
+        <button class="menu_close" onclick="closeMenu()">
+            <i class="fa-solid fa-x x-icon"></i>
+        </button>
+        <div class="menu-links">
+            <a href="#" class="menu-link" onclick="closeMenu()">Home</a>
+            <a href="#" class="menu-link" onclick="closeMenu()">About</a>
+            <a href="#" class="menu-link" onclick="closeMenu()">Vehicle Models</a>
+            <a href="#" class="menu-link" onclick="closeMenu()">Testimonials</a>
+            <a href="#" class="menu-link" onclick="closeMenu()">Our Team</a>
+            <a href="#" class="menu-link" onclick="closeMenu()">Contact</a>
         </div>
     </nav>
 
@@ -59,19 +76,25 @@
                     <h2 class="about-title">Quick and easy car rental</h2>
                     <div class="features">
                         <div class="box box-1">
-                            <img src="feature-1.png" alt="feature-1">
+                            <div class="feature-img-wrapper">
+                                <img src="feature-1.png" alt="feature-1">
+                            </div>
                             <h2 class="box-1-title">Select Car</h2>
                             <p class="box-1-para">We offers a big range of vehicles for all your driving needs. We have the perfect car to meet your needs</p>
                         </div>
                         <div class="box box-2">
-                            <img src="feature-2.png" alt="feature-2">
+                            <div class="feature-img-wrapper">
+                                <img src="feature-2.png" alt="feature-2">
+                            </div>
                             <h2 class="box-2-title">Contact Operator</h2>
                             <p class="box-2-para">
                                 Our knowledgeable and friendly operators are always ready to help with any questions or concerns
                             </p>
                         </div>
                         <div class="box box-3">
-                            <img src="feature-3.png" alt="feature-3">
+                            <div class="feature-img-wrapper">
+                                <img src="feature-3.png" alt="feature-3">
+                            </div>
                             <h2 class="box-3-title">Let's Drive</h2>
                             <p class="box-3-para">
                                 Whether you're hitting the open road, we've got you covered with our wide range of cars
@@ -91,7 +114,7 @@
             <div class="container vehicle-container">
                 <div class="vehicleModels-row row">
                     <figure class="choose-img-wrapper">
-                        <img src="choose-car.png" alt="img-of-cars">
+                        <img class="choose-car-img" src="choose-car.png" alt="img-of-cars">
                     </figure>
                     <div class="vehicleModels-content">
                         <div class="vehicleModels-text">
@@ -205,8 +228,12 @@
                             Thrown shy denote ten ladies though ask saw. Or by to he going think order event music. Incommode so intention defective at convinced. Led income months itself and houses you.
                         </p>
                         <div class="download-btns">
-                            <img src="download.png" class="google-play-btn">
-                            <img src="download-apple-store.png" alt="download-on-the-apple-store" class="apple-store-btn">
+                            <a href="">
+                                <img src="download.png" class="google-play-btn">
+                            </a>
+                            <a href="">
+                                <img src="download-apple-store.png" alt="download-on-the-apple-store" class="apple-store-btn">
+                            </a>
                         </div>
                     </div>
                     <div class="download-img-wrapper"></div>
@@ -214,55 +241,55 @@
             </div>
         </section>
 
-        <section id="footer">
-            <div class="container">
-                <div class="footer-row row">
-                    <div class="car-rental footer-boxes">
-                        <h3 class="car-rental-title">CAR RENTAL</h3>
-                        <p class="car-rental-para">
-                            We offer a big range of vehicles for all your driving needs. We have the perfect car to meet your needs.
-                        </p>
-                        <a href="#" class="car-rental-phone-number">
-                            <i class="fa-solid fa-phone phone-icon"></i>
-                            (123)-456-789
-                        </a>
-                        <a href="#" class="car-rental-email">
-                            <i class="fa-solid fa-envelope car-rental-email"></i>
-                            carrental@gmail.com
-                        </a>
-                        <a href="#">Designed by XpeedStudio</a>
-                    </div>
-                    <div class="company footer-boxes">
-                        <h3 class="company-title">
-                            COMPANY
-                        </h3>
-                        <a href="#" class="company-link">New York</a>
-                        <a href="#" class="company-link">Careers</a>
-                        <a href="#" class="company-link">Mobile</a>
-                        <a href="#" class="company-link">Blog</a>
-                        <a href="#" class="company-link">How we work</a>
-                    </div>
-                    <div class="working-hours footer-boxes">
-                        <h3 class="working-hours-title">
-                            WORKING HOURS
-                        </h3>
-                        <p class="working-hours-weekdays">
-                            Mon - Fri: 9:00AM - 9:00PM
-                        </p>
-                        <p class="working-hours-sat">Sat: 9:00AM - 19:00PM</p>
-                        <p class="working-hours-sun">Sun: Closed</p>
-                    </div>
-                    <div class="subscription footer-boxes">
-                        <h3 class="subscriptions-title">
-                            SUBSCRIPTION
-                        </h3>
-                        <label for="email-box">Subscribe your email address for latest news & updates</label>
-                        <input placeholder="Enter Email Address" type="email" class="email">
-                        <button class="subscribe-btn">Submit</button>
-                    </div>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-row row">
+                <div class="car-rental footer-boxes">
+                    <h3 class="car-rental-title">CAR RENTAL</h3>
+                    <p class="car-rental-para">
+                        We offer a big range of vehicles for all your driving needs. We have the perfect car to meet your needs.
+                    </p>
+                    <a href="#" class="car-rental-phone-number">
+                        <i class="fa-solid fa-phone phone-icon"></i>
+                        (123)-456-789
+                    </a>
+                    <a href="#" class="car-rental-email">
+                        <i class="fa-solid fa-envelope car-rental-email"></i>
+                        carrental@gmail.com
+                    </a>
+                    <a href="#">Designed by XpeedStudio</a>
+                </div>
+                <div class="company footer-boxes">
+                    <h3 class="company-title">
+                        COMPANY
+                    </h3>
+                    <a href="#" class="company-link">New York</a>
+                    <a href="#" class="company-link">Careers</a>
+                    <a href="#" class="company-link">Mobile</a>
+                    <a href="#" class="company-link">Blog</a>
+                    <a href="#" class="company-link">How we work</a>
+                </div>
+                <div class="working-hours footer-boxes">
+                    <h3 class="working-hours-title">
+                        WORKING HOURS
+                    </h3>
+                    <p class="working-hours-weekdays">
+                        Mon - Fri: 9:00AM - 9:00PM
+                    </p>
+                    <p class="working-hours-sat">Sat: 9:00AM - 19:00PM</p>
+                    <p class="working-hours-sun">Sun: Closed</p>
+                </div>
+                <div class="subscription footer-boxes">
+                    <h3 class="subscriptions-title">
+                        SUBSCRIPTION
+                    </h3>
+                    <label for="email-box">Subscribe your email address for latest news & updates</label>
+                    <input placeholder="Enter Email Address" type="email" class="email">
+                    <button class="subscribe-btn">Submit</button>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </footer>
 </body>
 </html>
