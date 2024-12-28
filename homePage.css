@@ -33,7 +33,7 @@ section {
 }
 
 
-nav {
+.nav {
     width: 100%;
     position: absolute;
     right: 0;
@@ -62,13 +62,13 @@ nav {
     top: 0;
     left: 0;right: 0;
     bottom: 0;
-    z-index: 5;
+    z-index: 99;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    visibility: hidden;
     transition: 200ms ease;
+    visibility: hidden;
 }
 
 .open .menu {
@@ -89,8 +89,10 @@ nav {
 
 
 .menu-icon {
+    background-color: transparent;
+    border: none;
     font-size: 24px;
-    visibility: hidden;
+    display: none;
 }
 
 .menu-links {
@@ -141,11 +143,18 @@ nav {
 }
 
 .btn {
+    color: white;
+    outline: none;
     height: 60px;
-    width: 120px;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 300ms ease;
 }
 
 .sign-in-btn {
@@ -239,7 +248,6 @@ header {
 
 .learn-more-btn {
     border: 2px solid black;
-    margin-left: 16px;
     background-color: var(--black);
     transition: 200ms ease;
 }
@@ -325,7 +333,9 @@ i {
     display: flex;
     padding: 0 32px;
     margin-top: 36px;
-    gap: 56px 120px;
+    gap: 56px 40px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .box {
@@ -559,19 +569,19 @@ i {
 }
 
 .author-image {
-    height: 80px;
+    height: 100%;
+    width: 100%;
     border-radius: 100px;
 }
 
 .author-box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     transform: translateY(30px);
+    gap: 16px;
 }
 
 .bio {
-    margin-left: 25px;
     display: flex;
 }
 
@@ -711,6 +721,10 @@ i {
         display: none;
     }
 
+    .menu-icon {
+        display: block;
+    }
+
     .menu-bars {
         visibility: visible;
         font-size: 20px;
@@ -723,6 +737,8 @@ i {
 
     .testimonials-list {
         justify-content: center;
+        flex-direction: column;
+        gap: 32px;
         flex-wrap: wrap;
     }
 
@@ -732,6 +748,10 @@ i {
         align-items: center;
         text-align: center;
         gap: 48px;
+    }
+
+    .vehicleModels-text {
+        align-items: center;
     }
 
     .footer-row {
@@ -756,6 +776,7 @@ i {
     .text-content {
         text-align: center;
     }
+    
 
     .header-image {
         display: none;
@@ -798,16 +819,71 @@ i {
         text-align: center;
     }
 
-    @media (max-width: 475px) {
-        .header-btns {
-            flex-direction: column;
-            width: 100%;
-        }
+    .testimonial {
+        padding: 32px;
+    }
+    
+    
+}
+@media (max-width: 480px) {
+    .header-btns {
+        flex-direction: column;
+    }
 
-        .header-figure-container {
-            width: 100%;
-        }
+    .book-ride-btn,
+    .learn-more-btn {
+        width: 100%;
+    }
 
+    
+
+    .header-figure-container {
+        width: 100%;
+    }
+
+    .choose-feature {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .testimonials-row {
+        justify-content: center;
+    }
+
+    .download-btns {
+        flex-wrap: wrap;
+    }
+
+    .footer-boxes {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .vehicleModels-features {
+        gap: 40px;
+    }
+    
+    .container-row {
+        justify-content: center;
+    }
+
+    .testimonials-list {
+        width: 100%;
+    }
+
+    .author-box {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .subscribe-btn {
+        width: 100%;
     }
 }
+
 /* RESPONSIVENESS */
