@@ -162,6 +162,7 @@ section {
     background-color: transparent;
     transition: 200ms ease;
     font-weight: 600;
+    color: black;
 }
 
 
@@ -518,6 +519,7 @@ i {
 #testimonials {
     background-color: #F3F3F3;
     z-index: 5;
+    margin-bottom: 80px;
 }
 
 .testimonials-row {
@@ -570,19 +572,21 @@ i {
 
 .author-image {
     height: 100%;
+    max-height: 72px;
     width: 100%;
     border-radius: 100px;
 }
 
 .author-box {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    transform: translateY(30px);
     gap: 16px;
 }
 
 .bio {
     display: flex;
+    text-align: left;
 }
 
 .bio h3 {
